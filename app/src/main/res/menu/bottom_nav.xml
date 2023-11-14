@@ -12,6 +12,6 @@
         android:title="Mapa" />
     <item
         android:id="@+id/pagina3"
-        android:icon="@drawable/mapaicon"
+        android:icon="@drawable/baseline_contact_mail_24"
         android:title="Sobre" />
 </menu>
