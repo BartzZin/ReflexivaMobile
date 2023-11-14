@@ -83,7 +83,7 @@ class Pagina1(weatherResponse: WeatherResponse?) : Fragment() {
                             "\n${diaChuva[4]}: ${probChuva[4]} - ${description[4]}" +
                             "\n${diaChuva[5]}: ${probChuva[5]} - ${description[5]}" +
                             "\n${diaChuva[6]}: ${probChuva[6]} - ${description[6]}" +
-                            "\n \nSistema desenvolvido para estudos."
+                            "\n \nSistema desenvolvido para estudos. "
         return view
 
     }
