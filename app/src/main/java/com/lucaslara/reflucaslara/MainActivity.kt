@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        ctx = applicationContext
+        ctx = application.applicationContext
         getClimas()
 
     }

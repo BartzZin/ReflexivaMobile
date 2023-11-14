@@ -4,38 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4DBD25"
+    android:background="#ADADAD"
+    android:backgroundTint="#93FEFF"
     tools:context=".Pagina1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        >
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/text_temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="temperatura"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_cidade"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_hora" />
+
+        <TextView
+            android:id="@+id/text_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lucas Marcelino Lara"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/underline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/text_intro" />
 
         <TextView
             android:id="@+id/text_cidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:gravity="center"
-            android:textSize="28dp"
             android:text="Cidade"
+            android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/text_intro" />
 
         <TextView
-            android:id="@+id/text_clima"
+            android:id="@+id/text_estado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Clima: "
-            android:textSize="28dp"
+            android:text="Estado"
+            android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="@+id/text_cidade"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_cidade" />
+
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Data"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_cidade"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_estado" />
+
+        <TextView
+            android:id="@+id/text_hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Hora"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_cidade"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_data" />
+
+        <TextView
+            android:id="@+id/text_probabilidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Probabilidade de Chuva"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_cidade"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_temperatura" />
+
+        <View
+            android:id="@+id/underline2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/text_probabilidade" />
+
+        <TextView
+            android:id="@+id/text_porcentagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="porcentagem"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_probabilidade"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="@+id/text_probabilidade"
+            app:layout_constraintTop_toBottomOf="@+id/text_probabilidade" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

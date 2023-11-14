@@ -43,11 +43,47 @@ class Pagina1(weatherResponse: WeatherResponse?) : Fragment() {
         val view = inflater.inflate(R.layout.fragment_pagina1, container, false)
 
         // Obter o texto passado como argumento
-        val texto = "Porra loka"
+        val error = "Sem conexão"
 
-        val textView = view.findViewById<TextView>(R.id.text_cidade)
-        textView.text = param3?.results?.city ?: "Cidade error"
+        val probChuva = Array<String?>(7) { null }
+        val dtChuva = Array<String?>(7) { null }
+        val diaChuva = Array<String?>(7) { null }
+        val description = Array<String?>(7) { null }
 
+        param3?.results?.forecast?.let { forecast ->
+            for (i in 0 until minOf(forecast.size, 7)) {
+                probChuva[i] = "${forecast[i]?.rainProbability?.toString()}%"
+                dtChuva[i] = forecast[i]?.date?.toString()
+                diaChuva[i] = forecast[i]?.weekday?.toString()
+                description[i] = forecast[i]?.description?.toString()
+            }
+        }
+
+        //Definicao dos Text da tela
+        val textViewCity = view.findViewById<TextView>(R.id.text_cidade)
+        textViewCity.text = param3?.results?.city ?: error
+
+        val textViewDes = view.findViewById<TextView>(R.id.text_estado)
+        textViewDes.text = param3?.results?.description ?: error
+
+        val textViewDate = view.findViewById<TextView>(R.id.text_data)
+        textViewDate.text = param3?.results?.date ?: error
+
+        val textViewHora = view.findViewById<TextView>(R.id.text_hora)
+        textViewHora.text = param3?.results?.time ?: error
+
+        val textViewtemp = view.findViewById<TextView>(R.id.text_temperatura)
+        textViewtemp.text = "${param3?.results?.temp ?: error} " + "Graus"
+
+        val textViewChuva = view.findViewById<TextView>(R.id.text_porcentagem)
+        textViewChuva.text = "Hoje: ${probChuva[0]} - ${description[0]}" +
+                            "\n${diaChuva[1]}: ${probChuva[1]} - ${description[1]}" +
+                            "\n${diaChuva[2]}: ${probChuva[2]} - ${description[2]}" +
+                            "\n${diaChuva[3]}: ${probChuva[3]} - ${description[3]}" +
+                            "\n${diaChuva[4]}: ${probChuva[4]} - ${description[4]}" +
+                            "\n${diaChuva[5]}: ${probChuva[5]} - ${description[5]}" +
+                            "\n${diaChuva[6]}: ${probChuva[6]} - ${description[6]}" +
+                            "\n \nSistema desenvolvido para estudos."
         return view
 
     }
