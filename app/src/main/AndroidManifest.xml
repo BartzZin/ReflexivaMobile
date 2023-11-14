@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Reflucaslara"
         tools:targetApi="31">
         <activity
+            android:name=".Sobre"
+            android:exported="false" />
+        <activity
             android:name=".Mapa"
             android:exported="false" />
         <activity

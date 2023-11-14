@@ -74,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                                     val intent = Intent(contexto, Mapa::class.java)
                                     startActivity(intent)
                                 }
+                                R.id.pagina3 -> { var contexto = applicationContext
+                                    val intentSobre = Intent(contexto, Sobre::class.java)
+                                    startActivity(intentSobre)
+                                }
 
                                 else -> {
                                     Toast.makeText(ctx, "Falha!", Toast.LENGTH_SHORT).show()

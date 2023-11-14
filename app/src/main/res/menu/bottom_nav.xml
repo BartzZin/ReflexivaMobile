@@ -10,4 +10,8 @@
         android:id="@+id/pagina2"
         android:icon="@drawable/mapaicon"
         android:title="Mapa" />
+    <item
+        android:id="@+id/pagina3"
+        android:icon="@drawable/mapaicon"
+        android:title="Sobre" />
 </menu>
